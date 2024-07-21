@@ -40,7 +40,6 @@ canvas {
     z-index: 100;
 }
 
-/* Header logo stil */
 .logo {
     font-size: 25px;
     color: green;
@@ -52,7 +51,6 @@ canvas {
     animation: slideTop 1s ease forwards;
 }
 
-/* Navbar stil */
 .navbar a {
     display: inline-block;
     font-size: 18px;
@@ -95,7 +93,6 @@ canvas {
     color: white;
 }
 
-/* Common content styles for home, about, skills, projects, contact */
 .home-content, .about-content, .skill-content, .project-content, .contact-content {
     max-width: 600px;
 }
@@ -109,35 +106,81 @@ canvas {
     padding: 70px 10% 0;
 }
 
-.home-content, .about-content, .skill-content, .project-content, .contact-content {
+.home-content {
     max-width: 600px;
     padding: 50px;
 }
 
-.home-content h1, .about-content h1, .skill-content h1, .project-content h1, .contact-content h1 {
+.home-content h1, .home-content h3, .home-content p {
+    opacity: 0;
+}
+
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
-    opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: .7s;
 }
 
-.home-content h3, .about-content h3, .skill-content h3, .project-content h3, .contact-content h3 {
+.home-content h3 {
     font-size: 32px;
     font-weight: 700;
-    opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
 
-.home-content p, .about-content p, .skill-content p, .project-content p, .contact-content p {
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 0;
+    text-align: left;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.mu {
+    margin-top: 50px;
+}
+
+.home-content h1, h3 {
+    text-shadow: 5px 4px 10px green;
+}
+
+.home-content h3 span {
+    color: rgb(0, 255, 0);
+}
+
+.home-content p {
     font-size: 16px;
     margin: 20px 0 0;
     text-align: left;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1.3s;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border: 2px solid green;
+    border-radius: 50%;
+    font-size: 20px;
+    color: green;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.home-sci a:hover {
+    background: green;
+    color: black;
+    box-shadow: 0 0 20px green;
 }
 
 .btn-box {
@@ -161,12 +204,30 @@ canvas {
     0 0 100px green, 0 0 200px green;
 }
 
-.home-img, .about-img img, .skill-img img, .project-item img {
+.home-img {
     width: 410px;
     height: 410px;
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2.1s, 3.1s;
+}
+
+.home-img .glowing-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .glowing-circle::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background-color: black;
+    border-radius: 50%;
 }
 
 .glowing-circle span {
@@ -199,7 +260,6 @@ canvas {
     z-index: 1;
 }
 
-/* Navbar-1 Stil */
 .navbar-1 a {
     font-size: 18px;
     color: #fff;
@@ -215,6 +275,83 @@ canvas {
     -webkit-text-fill-color: transparent;
     background-clip: border-box;
     -webkit-background-clip: text;
+}
+
+/* About, Skills, Projects, Contact Sections */
+.about, .skill, .project, .contact {
+    width: 100%;
+    padding: 70px 10% 0;
+    margin-top: 10%;
+    color: white;
+}
+
+.about-content, .skill-content, .project-content, .contact-content {
+    max-width: 600px;
+}
+
+.about-content h1, .about-content h3, .about-content p,
+.skill-content h1, .skill-content h3, .skill-content p,
+.project-content h1, .project-content h3, .project-content p,
+.contact-content h1, .contact-content h3, .contact-content p {
+    opacity: 0;
+}
+
+.about-content h1, .skill-content h1, .project-content h1, .contact-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.about-content h3, .skill-content h3, .project-content h3, .contact-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.about-content p, .skill-content p, .project-content p, .contact-content p {
+    font-size: 16px;
+    margin: 20px 0 0;
+    text-align: left;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.about-img img, .project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.skill-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-content ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-item p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.contact-content a {
+    color: green;
+    text-decoration: none;
+}
+
+.contact-content a:hover {
+    text-decoration: underline;
 }
 
 /* Müzik kontrol butonu */
