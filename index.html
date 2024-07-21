@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | bed0c</title>
+
+    <link rel="icon" type="png|image" href="/IMAGES/logo.png">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="/JAVASCRIPT/music.js" defer></script> <!-- Yeni eklenen JavaScript dosyası -->
+
+</head>
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+                                                        <!-- Matrix -->
+    <script src="/JAVASCRIPT/matrix.js"></script>
+
+    <header class="header">
+        <a href="#" class="logo">{Portfolio} </a>
+
+        <nav class="navbar">
+            <a href="index.html" style="--i:1;" class="active">Home</a>
+            <a href="about.html" style="--i:2;">About</a>
+            <a href="skills.html" style="--i:3;">Skills</a>
+            <a href="projects.html" style="--i:4;">Projects</a>
+            <a href="contact.html" style="--i:5;">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content" data-scroll data-scroll-speed="-5">
+            <h3 class="mu">Hello, It's me</h3>
+            <h1>bed0c</h1>
+            <h3>And I'm a <span class="pro-text">
+                <script>
+                   var typed = new Typed(".pro-text", {
+                      strings: [
+                        "Scripter",
+                        "UI Designer",
+                        "Music Designer",
+                        "Animator",
+                        "Clothing Designer"
+                      ],
+                      typeSpeed: 100,   
+                      backSpeed: 100,   
+                      backDelay: 1000,  
+                      loop: true        
+                    });
+                </script>
+            </span></h3>
+            
+            <p>  &emsp; &emsp;This portfolio highlights my passion for Roblox development and my commitment to delivering high-quality commissions. <br> <br>
+                &emsp; &emsp;I have acquired fundamental knowledge and skills in various areas of Roblox scripting and design, allowing me to contribute to the creativity and success of various projects. <br> <br>
+                &emsp; &emsp;Completed multiple commissions involving scripting, UI design, music design, animation, and clothing design on Roblox.  
+            </p>
+
+            <div class="home-sci">
+                <a href="https://github.com/bed0c" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing-circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="/IMAGES/bed0c.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Müzik kontrol butonu -->
+    <div id="music-toggle" class="music-toggle">
+        <img id="sound-icon" src="/IMAGES/sound-on.png" alt="Sound On">
+    </div>
+
+</body> 
+</html>
